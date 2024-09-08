@@ -1,0 +1,126 @@
+.homepage{
+  height: 100vh;
+  width: 100%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  background-color: #1c1e1a;
+}
+section{
+  bottom: 20%;
+  height: 80%;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+h1{
+  padding-bottom: 20px;
+  font-size: 4rem;
+
+}
+.wrapper{
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  right: 25%;
+  bottom: 5%;
+  z-index: 1;
+  border: 2px solid blackr;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-image: url("https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/14789/soccer-ball-sports-clipart-md.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}
+@keyframes circle7124 {
+  0% {
+    top: 100px;
+
+    border-radius: 50px 50px 25px 25px;
+ 
+  }
+
+  40% {
+    border-radius: 50%;
+  }
+  
+  100% {
+    transform:rotate(40deg);
+    top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+.shadow {
+  width: 50px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 180px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 30%;
+  filter: blur(1px);
+  animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1) ;
+    opacity: .7;
+  }
+
+  100% {
+    transform: scaleX(.2) ;
+    opacity: .4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+span{
+  background-image:linear-gradient(45deg,white,rgba(156, 156, 156, 0.1));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+p{
+  font-size: 0.9rem;
+}
+.goal_img{
+  width: 50%;
+}
