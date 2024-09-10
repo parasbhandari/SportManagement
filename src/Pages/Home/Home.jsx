@@ -1,9 +1,11 @@
 import React from 'react'
 import HmImg from '../../assets/ftbg.svg'
 import Button from "../../Components/Button"
+import Sponser from "../../Components/Sponser"
 import "./Home.css"
 function Home() {
   return (
+    <>
     <div className='homepage'>
       <section>
         <h1>
@@ -25,8 +27,11 @@ function Home() {
       <div className='goal_img'>
       <img src={HmImg} alt="football_image" />
       </div>
-   
-    </div>
+      </div>
+
+      {/* //Sponser Block */}
+      <Sponser/>
+      </>
   )
 }
 

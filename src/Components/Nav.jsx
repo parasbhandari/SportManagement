@@ -1,14 +1,15 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
   const [navigation, setNavigation] = useState([
-    { name: 'LeaderBoard', href: '#', current: false },
-    { name: 'Sponsors', href: '#', current: false },
-    { name: 'Events', href: '#', current: false },
-    { name: 'Matches', href: '#', current: false },
-    { name: 'Teams', href: '#', current: false },
+    { name: 'LeaderBoard', href: '/LeaderBoard', current: false },
+    { name: 'Sponsors', href: '/Sponsers', current: false },
+    { name: 'Events', href: '/Events', current: false },
+    { name: 'Matches', href: '/Matches', current: false },
+    { name: 'Teams', href: '/Teams', current: false },
   ]);
 
   function handleNavigationClick(name) {
@@ -37,7 +38,7 @@ export default function Nav() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <a href="#">
+            <Link to="/">
               <div className="flex flex-shrink-0 items-center">
                 <img
                   alt="Your Company"
@@ -45,14 +46,14 @@ export default function Nav() {
                   className="h-10 w-11 rounded-full "
                 />
               </div>
-            </a>
+            </Link>
 
             <div className="hidden sm:ml-16 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     onClick={() => handleNavigationClick(item.name)}
                     className={classNames(
@@ -63,7 +64,7 @@ export default function Nav() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

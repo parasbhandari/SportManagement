@@ -1,0 +1,60 @@
+.about_page {
+  height: 90vh;
+}
+.about_page .about_container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.about_page .about_container .heading {
+  width: 40%;
+  text-align: left;
+}
+.about_page .about_container .heading .achievement {
+  margin-top: 20px;
+  box-shadow: 1px 1px 10px rgb(166, 166, 166);
+  border-radius: 10px;
+  padding: 10px;
+}
+h2 {
+  font-size: 35px;
+}
+.other_info {
+  width: 55%;
+}
+.sponsers {
+  min-height: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px gray;
+  margin-top: 5px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  place-content: center;
+  place-items: center;
+}
+.sponsers img {
+  max-height: 100px;
+  box-shadow: 0px 0px 5px gray;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 70px;
+}
+.about_page .about_container h1 {
+  font-size: 36px;
+  stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: var(--global_blue);
+  stroke: var(--global_blue);
+}
+.about_page .about_container .read {
+  cursor: pointer;
+  margin-top: 5px;
+}
+.about_page .about_container p {
+  text-align: left;
+}
