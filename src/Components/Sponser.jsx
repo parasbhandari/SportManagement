@@ -15,7 +15,7 @@ function Sponser() {
         <div className="other_info">
             <p>
                 Nepal Sports Organization in Nepal excels in organizing online sports data. Specializing in match statistics, live updates, and innovative dashboards, we offer comprehensive insights into tournaments, player performances, and standings. </p>
-                <p class="bold_span read">Read More . . . </p>
+                <p className="bold_span read">Read More . . . </p>
 
                 <div className="sponsers">
 

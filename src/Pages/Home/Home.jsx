@@ -9,9 +9,9 @@ function Home() {
     <div className='homepage'>
       <section>
         <h1>
-        <div class="wrapper">
-                <div class="circle"></div>
-                <div class="shadow"></div>
+        <div className="wrapper">
+                <div className="circle"></div>
+                <div className="shadow"></div>
         </div>
           2024 <br /> <span>
           Nepal Games
@@ -21,7 +21,7 @@ function Home() {
         Champions' empowerment, excellence nurtured <br/>- Welcome to Sundarbazzer Sports, where dedication leads to success.
         </p>
         <a href='#'>
-          <Button name="Recent LeaderBoard"></Button>
+          <Button name="Recent LeaderBoard" color="bg-sky-500/60"></Button>
         </a>
       </section>
       <div className='goal_img'>

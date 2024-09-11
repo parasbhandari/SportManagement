@@ -1,7 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Nav() {
   const [navigation, setNavigation] = useState([
@@ -11,6 +11,18 @@ export default function Nav() {
     { name: 'Matches', href: '/Matches', current: false },
     { name: 'Teams', href: '/Teams', current: false },
   ]);
+  
+  const navigate = useNavigate();
+
+  function handleLogoClick() {
+    setNavigation((prevNavigation) =>
+      prevNavigation.map((item) => ({
+        ...item,
+        current: false,
+      }))
+    );
+    navigate('/'); // Programmatically navigate to the homepage
+  }
 
   function handleNavigationClick(name) {
     setNavigation((prevNavigation) =>
@@ -38,15 +50,14 @@ export default function Nav() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <Link to="/">
-              <div className="flex flex-shrink-0 items-center">
-                <img
-                  alt="Your Company"
-                  src="https://th.bing.com/th/id/OIG4.onB2FLDSZtb9ECxW7JEW?w=1024&h=1024&rs=1&pid=ImgDetMain"
-                  className="h-10 w-11 rounded-full "
-                />
-              </div>
-            </Link>
+            <div className="flex flex-shrink-0 items-center">
+              <img
+                alt="Your Company"
+                src="https://th.bing.com/th/id/OIG4.onB2FLDSZtb9ECxW7JEW?w=1024&h=1024&rs=1&pid=ImgDetMain"
+                className="h-10 w-11 rounded-full cursor-pointer"
+                onClick={()=>handleLogoClick()}
+              />
+            </div>
 
             <div className="hidden sm:ml-16 sm:block">
               <div className="flex space-x-4">
