@@ -1,5 +1,6 @@
 import React from 'react'
 import OnEvents from '../../Components/OnEvents'
+import {Outlet} from "react-router-dom"
 function LeaderBoard() {
   return (
     <div>
@@ -7,7 +8,7 @@ function LeaderBoard() {
       <h1 className='font-bold text-indigo-200'>Ongoing Events</h1>
       </div>
       <OnEvents/>
-
+      <Outlet/>
      
     </div>
   )

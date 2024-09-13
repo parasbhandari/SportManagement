@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import {Link} from "react-router-dom"
 function OnEvents() {
   return (
     <div>
@@ -12,7 +13,7 @@ function OnEvents() {
             <h1 className='text-gray-400'>Chitwan Football League</h1>
             <div className='flex justify-around items-center'>
               <p className='text-xl'>Upto 25 Aug</p>
-             <Button name="Event Detail" color="bg-indigo-600/60"/>
+            <Link to="EventDetails"> <Button name="Event Detail" color="bg-indigo-600/60"/></Link> 
              <Button name="Scores" color="bg-indigo-600/60"/>
             </div>
             </div>
