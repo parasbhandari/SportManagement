@@ -38,7 +38,7 @@ export default function Nav() {
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-6">
+      <div className="mx-auto w-4/5 px-2 sm:px-6 lg:px-6">
         <div className="w-auto relative flex h-24 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
