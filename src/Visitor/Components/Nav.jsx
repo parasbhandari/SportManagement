@@ -81,13 +81,16 @@ export default function Nav() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <Link to="/Join">
             <button
               type="button"
-              className="relative rounded-full bg-black p-2 hover:bg-gray-700 text-gray-200 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-black-800 text-lg shadow-2xl"
+              className="relative rounded-full bg-black p-2 hover:bg-gray-700 text-gray-200 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-black-800 text-lg shadow-2xl" onClick={()=>handleLogoClick()}
             >
               <span className="absolute -inset-1.5" />
               JOIN NOW
             </button>
+            </Link> 
+            
           </div>
         </div>
       </div>

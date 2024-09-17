@@ -7,7 +7,8 @@ function LeaderBoard() {
       <div className='flex justify-center mt-4'>
       <h1 className='font-bold text-indigo-200'>Ongoing Events</h1>
       </div>
-      <OnEvents/>
+      <OnEvents name="Chitwan Premeier League" time="Upto 25 Aug"/>
+      
       <Outlet/>
      
     </div>

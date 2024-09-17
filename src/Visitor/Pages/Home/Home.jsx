@@ -1,5 +1,5 @@
 import React from 'react'
-import HmImg from '../../assets/ftbg.svg'
+import HmImg from '../../../assets/ftbg.svg'
 import Button from "../../Components/Button"
 import Sponser from "../../Components/Sponser"
 import "./Home.css"
