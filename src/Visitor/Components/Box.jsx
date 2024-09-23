@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import {Link} from "react-router-dom"
 
 function Box(props) {
   return (
@@ -13,10 +14,16 @@ function Box(props) {
       <h2 className='relative font-bold text-white z-10'>{props.name}</h2>
       <div className='relative flex flex-col items-center z-10'>
         <div className='mb-5 mt-3 text-xl p-4'>
+          <Link to={`${props.path}/Login`}>
           <Button name="Login" color="bg-sky-800" />
+          </Link>
+          
         </div>
         <div className='text-xl'>
+          <Link to={`${props.path}/Register`}>
           <Button name="Register" color="bg-indigo-600/60" />
+          </Link>
+          
         </div>
       </div>
     </div>

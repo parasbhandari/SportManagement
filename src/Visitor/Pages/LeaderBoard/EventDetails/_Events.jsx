@@ -30,16 +30,10 @@ rounded-3xl">
       >
         Match/TieSheet
       </li>
-      <li 
-        className={`cursor-pointer ${activeTab === 'Scores' ? 'border-b-4 border-white' : ''}`}
-        onClick={() => handleClick('Scores')}
-      >
-        Scores
-      </li>
     </ul>
       </div>
       {
-        activeTab=="Details"? <Details/>:(activeTab=="Match/TieSheet"? <MatchSheet/>:<Scores/> )
+        activeTab=="Details"? <Details/>: <MatchSheet/> 
       }
      
     </div>
