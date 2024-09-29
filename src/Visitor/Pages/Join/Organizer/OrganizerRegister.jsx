@@ -1,5 +1,5 @@
 import React from 'react'
-import Register from "../../../Auth/Register"
+import Register from "../../../Components/Register"
 import OrganizerImg from "../../../../assets/Organizer.jpg"
 function OrganizerRegister() {
   return (

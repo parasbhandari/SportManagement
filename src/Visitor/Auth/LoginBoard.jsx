@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // import eye icons
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginBoard(props) {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ function LoginBoard(props) {
 
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Hook for navigation
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -36,8 +38,13 @@ function LoginBoard(props) {
       if (response.status === 200) {
         // Handle successful authentication, e.g., store the token or redirect
         console.log('Login successful:', response.data);
-        // Redirect user to dashboard or other page if needed
-        // window.location.href = '/dashboard';
+
+        // Redirect based on props.name
+        if (props.name === "Organizer") {
+          navigate('/organizer');
+        } else {
+          navigate('/team');
+        }
       } else {
         // Handle errors returned by the backend (e.g., wrong credentials)
         setError(response.data.message || 'Authentication failed.');
@@ -106,7 +113,10 @@ function LoginBoard(props) {
                     {showPassword ? <FaEyeSlash /> : <FaEye />}
                   </span>
                 </div>
-                <p className='underline mb-3'>Forgot Password? Click to reset.</p>
+                <Link to={`/${props.name}/ForgotPassword`}>
+                  <p className='underline mb-3'>Forgot Password? Click to reset.</p>
+                </Link>
+                
                 {error && <p className='text-red-500'>{error}</p>}
                 <button
                   type="submit"

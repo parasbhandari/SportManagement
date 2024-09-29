@@ -43,7 +43,7 @@ function Register(props) {
 
       if (response.status === 200) {
         // Handle successful authentication, e.g., store the token or redirect
-        console.log('Login successful:', response.data);
+        console.log('Registration successful:', response.data);
         // Redirect user to dashboard or other page if needed
         // window.location.href = '/dashboard';
       } else {
@@ -133,7 +133,7 @@ function Register(props) {
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    placeholder='password'
+                    placeholder='Password'
                     style={{
                       width: '100%',
                       padding: '13px',

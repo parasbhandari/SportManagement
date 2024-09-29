@@ -1,6 +1,6 @@
 import React from 'react'
 import TeamImg from "../../../../assets/Team.jpg"
-import Register from '../../../Auth/Register'
+import Register from '../../../Components/Register'
 function TeamRegister() {
   return (
     <div>
