@@ -298,7 +298,7 @@ nav {
     // border: 2px solid green;
     width: 50%;
     img{
-      height: 100%;
+      height: 80%;
     }
   }
 
@@ -1660,5 +1660,150 @@ nav {
         font-weight:bold;
       }
     }
+  }
+}
+
+
+
+.team_box_container{
+  border: 2px solid white;
+  height: 80vh;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  .box{
+    width:49%; 
+    height: 100%;
+    // width: 100%;
+    border: 2px solid gray;
+
+  }
+}
+
+.team_ground{
+  border: 2px solid green;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  // background-color: green;
+  // background-image: url("https://static.vecteezy.com/system/resources/previews/019/060/081/non_2x/abstract-green-grass-football-field-of-artificial-grass-background-texture-top-view-photo.jpg");
+  // background-size: contain;
+  .ground_jersey{
+    position: absolute;
+    &.goal_keeper{
+      bottom: 10px;
+    }
+    &.defense.left{
+      bottom: 35%;
+      left: 10%;
+    }
+
+    &.defense.right{
+      bottom: 35%;
+      right:10%;
+    }
+    &.defense.center-left{
+      bottom: 20%;
+      right: 30%;
+    }
+    &.defense.center-right{
+      bottom: 20%;
+      left: 30%;
+    }
+    &.middle.left{
+      top: 40%;
+      left: 30%;
+    }
+    &.middle.right{
+      top: 40%;
+      right:30%
+    }
+    &.front.left{
+      top: 10%;
+      left: 10%;
+    }
+    &.front.right{
+      top: 10%;
+      right: 10%;
+    }
+    &.front.center-left{
+      top: 2%;
+      left: 30%;
+    }
+    &.front.center-right{
+      top: 2%;
+      right: 30%;
+    }
+  }
+  .goal_post{
+    position: absolute;
+    height: 100px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    width: 30%;
+    bottom: -1px;
+  }
+
+  .team_area{
+    position: absolute;
+    height: 100px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    width: 70%;
+    height: 40%;
+    z-index: -1;
+    bottom: -1px;
+  }
+  .ground_center{
+    position: absolute;
+    // border: 1px solid red;
+    top: 0;
+    width: 300px;
+    height: 150px;
+    // background-color: #3498db;
+    border: 2px solid white;
+    z-index: -1;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top: none;
+  }
+
+  .post_center{
+    position: absolute;
+    width: 150px;
+    height:75px;
+    // background-color: #3498db;
+    border: 2px solid white;
+    z-index: -1;
+    bottom: calc(40% - 1px);
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    border-bottom: none;
+  }
+  .penalty_point{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: white;
+    bottom: 25%;
+  }
+}
+
+.two_teams_vs{
+  height: 75vh;
+  column-gap: 5px;
+  .team1{
+    width: 50%;
+    // border: 2px solid green;
+    transform: rotate(90deg);
+  }
+  .team2{
+    width: 50%;
+    // border: 2px solid green;
+    transform: rotate(-90deg);
   }
 }
